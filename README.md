@@ -27,5 +27,5 @@ This project focuses on exercising fundamental software engineering practices:
 Student-Management-System/
 ├── src/
 │   └── main/
-│       └── Student_Management_System.cpp
+│       └── main.cpp
 └── README.md
