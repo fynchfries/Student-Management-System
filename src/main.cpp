@@ -38,6 +38,7 @@ struct Student {
     // TODO: Display the status
     std:: cout << "Status: " << getStatus() << "\n";
   }
+
 };
 
 int main (){
@@ -47,7 +48,7 @@ int main (){
     // TODO: Ask the user for the student's information
 
     for (int i = 0; i < 3; i++) {
-        std:: cout << "Student#: " << i + 1;
+        std:: cout << "Student#: " << i + 1 << "\n";
 
         std:: cout << "Enter your ID: \n";
         std:: cin >> students[i].id;
@@ -65,10 +66,30 @@ int main (){
         std:: cin >> students[i].mathematics;
     };
 
+    std:: string searchName;
+    std:: cout <<"Search student name: \n";
+    std:: cin >> searchName;
+
+
+    bool studentFound = false;
+    for (int i = 0; i < 3; i++) {
+        if(students[i].name == searchName) {
+            studentFound = true;
+            std:: cout << students[i].name << " was found";
+            break;
+
+        }
+    }
+
+    if (!studentFound) {
+        std:: cout << "Student Not Found!\n";
+    }
 
     // TODO: Display the student's information
-  student.display();
-  student.displayReport();
+    student.display();
+    student.displayReport();
 
   return 0;
 }
+
+
